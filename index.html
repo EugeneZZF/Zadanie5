@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+    	<meta charset="UTF-8">
+    	<link rel="stylesheet" type="text/css" href="style.css">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<script defer src="gg.js"></script>
+    	<title>Задание 5</title>
+    </head>
+    <body style="background-image: rl('99px_ru_wallpaper_346173_raiden_shogun__segun_rajden_iz_igri_genshin.png');">
+    	<p><div class="body" align="center">
+    		<form class="container row" style="display: flex; width: 500px; justify-content: center;">
+    			<div class="form-group">
+    				<br><h3>Калькулятор стоимости</h3></p>
+
+					<body>
+						<div class="calc">
+							<form>
+								<div class="fisrt">
+									<label for="quantity">Количество товара:</label>
+								<input name="quantity" id="quantity" type="text">
+								</div>
+								
+								
+								<label class="next" for="product">Выберите товар:</label>
+								<select name="product" id="product">
+									<option value="100">Товар A - 100 руб.</option>
+									<option value="200">Товар B - 200 руб.</option>
+									<option value="300">Товар C - 300 руб.</option>
+								</select>
+								
+								<button type="button" class="calc_button" id="button1">Рассчитать</button>
+								<div id="result" class="calc_result"></div>
+							</form>
+						</div>
+						
+						<script>
+							document.getElementById('button1').addEventListener('click', function() {
+								const quantity = document.getElementById('quantity').value;
+								const productPrice = document.getElementById('product').value;
+								const totalCost = quantity * productPrice;
+								document.getElementById('result').textContent = 'Стоимость заказа: ' + totalCost + ' руб.';
+							});
+						</script>
+					</body>
+					
+					
+
+</html>
